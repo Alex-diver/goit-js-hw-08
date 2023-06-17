@@ -8,7 +8,7 @@ const playerTime = 'videoplayer-current-time';
 function saveLocal(e) {
   const presentЕime = e.seconds;
 
-  localStorage.setItem('playerTime', JSON.stringify(presentЕime));
+  localStorage.setItem(playerTime, JSON.stringify(presentЕime));
 }
 
 player.on('play', resumeWhatching);
@@ -25,7 +25,6 @@ function resumeWhatching() {
           break;
 
         default:
-          // some other error occurred
           break;
       }
     });
