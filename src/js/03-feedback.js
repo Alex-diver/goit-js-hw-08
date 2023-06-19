@@ -26,6 +26,10 @@ form.addEventListener('input', updateLocalStorage);
 
 form.addEventListener('submit', e => {
   e.preventDefault();
+  if (!emailInput.value || !messageInput.value) {
+    alert('Будь ласка, заповніть всі поля');
+    return;
+  }
   const state = {
     email: emailInput.value,
     message: messageInput.value,
