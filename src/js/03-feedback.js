@@ -5,7 +5,7 @@ const emailInput = document.querySelector('input[name="email"]');
 const messageInput = document.querySelector('textarea[name="message"]');
 const FORM_KEY = 'feedback-form-state';
 
-form.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   const storedState = localStorage.getItem(FORM_KEY);
   if (storedState) {
     const { email, message } = JSON.parse(storedState);
